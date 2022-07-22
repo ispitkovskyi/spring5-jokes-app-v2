@@ -20,7 +20,10 @@ public class JokeController {
 
     @RequestMapping({"/", ""}) //any of these strings in URL should cause this method execution
     public String showJoke(Model model){
+        //appends string returned by jokesService.getJoke() to the property "joke"
         model.addAttribute("joke", jokeService.getJoke());
+
+        //this tells the Thymeleaf to look for template file called "index" in "templates" directory inside resources
         return "index";
     }
 }

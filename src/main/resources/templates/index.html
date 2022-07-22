@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<!--Added the xml namespace for Thymeleaf-->
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuck Norris Jokes</title>
+</head>
+<body>
+    <h1>Chuck Norris Joke</h1>
+<!--    Thymeleaf tag (from the thymeleaf namespace), on rutime, when Thymeleaf processes this template, "joke" property will get replace with a string value of joke (see JokeController class)  -->
+    <p th:text="${joke}">Show Joke here...</p>
+</body>
+</html>
